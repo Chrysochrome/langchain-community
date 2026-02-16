@@ -498,10 +498,13 @@ class ChatTongyi(BaseChatModel):
             "qwen-vl-plus-latest",
             "qwen-vl-max",
             "qwen-vl-max-latest",
+            "qwen3.5-plus",
+            "qwen3.5-397b-a17b"
         ]
         if (
             values["model_name"] in dashscope_multimodal_models
             or "vl" in values["model_name"]
+            or "qwen3.5-plus" in values["model_name"]
         ):
             try:
                 values["client"] = dashscope.MultiModalConversation
