@@ -505,6 +505,7 @@ class ChatTongyi(BaseChatModel):
             values["model_name"] in dashscope_multimodal_models
             or "vl" in values["model_name"]
             or "qwen3.5" in values["model_name"]
+            or "qwen3.6" in values["model_name"]
         ):
             try:
                 values["client"] = dashscope.MultiModalConversation
